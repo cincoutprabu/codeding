@@ -3,16 +3,17 @@
 module.exports = {
     merge: function (a, start, end) {
         if (end > start) {
-            // 'Combine' step
+            // 'Divide' step
             let mid = parseInt(start + (end - start) / 2);
+
+            // 'Conquer' step (merge recursively)
             module.exports.merge(a, start, mid);
             module.exports.merge(a, mid + 1, end);
 
-            // 'Divide' step
+            // 'Combine' step (sort and merge)
             let left = a.slice(start, mid + 1);
             let right = a.slice(mid + 1, end + 1);
 
-            // 'Conquer' step (sort and merge)
             let i = 0, j = 0, k = start;
             while (i < left.length && j < right.length) {
                 if (left[i] > right[j]) {
