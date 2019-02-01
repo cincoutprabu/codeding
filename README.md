@@ -1,2 +1,2 @@
 # codeding
-Code repository for articles on codeding.com.
+Code repository for articles on http://codeding.com.
