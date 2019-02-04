@@ -9,6 +9,7 @@ var BinaryNode = require('../tree/binaryNode');
 
 let a = [5, 7, 1, -2, 8, 5, 0];
 // let a = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7];
+// let a = [5, 3, 17, 10, 84, 19, 6, 22, 9];
 console.log('Before: ' + a);
 
 // bubbleSort.sort(a);
