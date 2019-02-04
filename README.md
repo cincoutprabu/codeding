@@ -2,7 +2,7 @@ JavaScript / ES6 implementation of algorithms from the book *Introduction to Alg
 
 **Disclaimer**
 
-This is not officially endorsed by the book authors or publishers. This is part of my personal learning process and practicing implementing most, if not all, algorithms from the book. Functions/methods has been named similar to the book, and tested typically with the same sample inputs mentioned in the book (so you can cross reference the code side-by-side when you are reading the book).
+This is not officially endorsed by the book authors or publishers. This is part of my personal journey and deep dive into algorithms, as I'm practicing to implement most, if not all, algorithms from the book. Functions/methods has been named similar to the book, and tested typically with the same sample inputs mentioned in the book (so you can cross reference the code side-by-side when you are reading the book).
 
 **Why JavaScript / ES6?**
 
