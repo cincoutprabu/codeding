@@ -32,7 +32,8 @@ module.exports = {
     buildMaxHeap: function (a) {
         a.heap_size = a.length;
 
-        for (let i = a.length / 2; i >= 0; i -= 1) {
+        let mid = parseInt(a.length / 2);
+        for (let i = mid; i >= 0; i -= 1) {
             module.exports.maxHeapify(a, i);
         }
     },
