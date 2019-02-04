@@ -8,4 +8,4 @@ This is not officially endorsed by the book authors or publishers. This is part 
 
 **Why JavaScript / ES6?**
 
-JavaScript / ES6 has been chosen to accompany technical articles in my website http://codeding.com. I will try to create another repository for implementing these algorithms in a high-level programming language like C++, C# or Java. Link to that repository will be posted here when it's ready.
+JavaScript / ES6 has been chosen to accompany technical articles in my website http://codeding.com. Time permiting, I will try to create another repository for implementing these algorithms in a high-level programming language like C++, C# or Java. Link to that repository will be posted here when it's ready.
