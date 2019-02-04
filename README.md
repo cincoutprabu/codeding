@@ -1,5 +1,3 @@
-# codeding
-
 JavaScript / ES6 implementation of algorithms from the book *Introduction to Algorithms, Third Edition* by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein, famously called as the CLRS book (where CLRS in an acrynom for lastnames of the authors).
 
 **Disclaimer**
