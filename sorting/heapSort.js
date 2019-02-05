@@ -1,6 +1,6 @@
 // heapSort.js
 
-var Heap = require('../tree/heap');
+var Heap = require('../heap/heap');
 
 module.exports = {
     sort: function (a) {
