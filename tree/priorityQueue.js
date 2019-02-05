@@ -39,19 +39,21 @@ module.exports = class PriorityQueue {
         }
 
         a[i] = key;
-        let parent = parseInt(i / 2);
+        let parent = Heap.parent(i);
+
         while (i > 0 && a[parent] < a[i]) {
             let temp = a[i];
             a[i] = a[parent];
             a[parent] = temp;
 
             i = parent;
+            parent = Heap.parent(i);
         }
     }
 
     static maxHeapInsert(a, key) {
         a.heap_size = a.heap_size + 1;
         a[a.heap_size - 1] = Number.MIN_VALUE;
-        this.heapIncreaseKey(a, a.heap_size, key);
+        this.heapIncreaseKey(a, a.heap_size - 1, key);
     }
 }
