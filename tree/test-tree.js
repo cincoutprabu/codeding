@@ -1,11 +1,8 @@
 // test-tree.js
 
 var BinaryNode = require('../tree/binaryNode');
-var Heap = require('../tree/heap');
-var PriorityQueue = require('../tree/priorityQueue');
 
-// testBinaryTree();
-testPriorityQueue();
+testBinaryTree();
 
 function testBinaryTree() {
     let node4 = new BinaryNode(4);
@@ -34,16 +31,4 @@ function testBinaryTree() {
     node16.Left = node7;
 
     node4.print();
-}
-
-function testPriorityQueue() {
-    let a = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7];
-
-    console.log('Before: ' + a);
-    Heap.buildMaxHeap(a);
-    console.log('Heap: ' + a);
-    PriorityQueue.heapIncreaseKey(a, 8, 15);
-    console.log('After Increasing Key: ' + a);
-    PriorityQueue.maxHeapInsert(a, 11);
-    console.log('After Inserting: ' + a);
 }
