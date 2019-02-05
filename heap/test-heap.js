@@ -1,7 +1,7 @@
 // test-heap.js
 
-var Heap = require('../tree/heap');
-var PriorityQueue = require('../tree/priorityQueue');
+var Heap = require('./heap');
+var PriorityQueue = require('./priorityQueue');
 
 testPriorityQueue();
 
@@ -15,6 +15,9 @@ function testPriorityQueue() {
     PriorityQueue.heapIncreaseKey(a, 8, 15);
     console.log('After Increasing Key: ' + a);
 
-    PriorityQueue.maxHeapInsert(a, 11);
+    PriorityQueue.maxHeapInsert(a, 21);
     console.log('After Inserting: ' + a);
+
+    let max = PriorityQueue.heapExtractMax(a);
+    console.log('After Removing max element ' + max + ': ' + a);
 }
