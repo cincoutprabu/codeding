@@ -3,10 +3,12 @@
 var moveZeroes = require('./moveZeroes');
 var waterJugs = require('./waterJugs');
 var mergeArray = require('./mergeArray');
+var postOffice = require('./postOffice');
 
 // testMoveZeroes();
 // testWaterJugs();
-testMergeSortedArrays();
+// testMergeSortedArrays();
+testPostOffice();
 
 function testMoveZeroes() {
     // let a = [1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6];
@@ -33,4 +35,12 @@ function testMergeSortedArrays() {
     console.log('After Merging:\n');
     console.log(a);
     console.log(b);
+}
+
+function testPostOffice() {
+    let x = [2, 3, 4, 6, 5, 4];
+    let y = [2, 3, 4, 3, 2, 1];
+    let w = [1, 1, 1, 1, 1, 1];
+    let p = postOffice.postOffice(x, y, w);
+    console.log('Centroid: ' + p);
 }

@@ -2,7 +2,7 @@
 
 module.exports = {
     /*
-        Problem Description:
+        Water Jugs Problem:
         Suppose that you are given n red and n blue water jugs, all of
         different shapes and sizes. All red jugs hold different amounts
         of water, as do the blue ones. There is a blug jug that holds
