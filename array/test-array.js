@@ -4,11 +4,13 @@ var moveZeroes = require('./moveZeroes');
 var waterJugs = require('./waterJugs');
 var mergeArray = require('./mergeArray');
 var postOffice = require('./postOffice');
+var QueueUsingStack = require('./queueUsingStack');
 
 // testMoveZeroes();
 // testWaterJugs();
 // testMergeSortedArrays();
-testPostOffice();
+// testPostOffice();
+testQueueUsingStack();
 
 function testMoveZeroes() {
     // let a = [1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6];
@@ -43,4 +45,18 @@ function testPostOffice() {
     let w = [1, 1, 1, 1, 1, 1];
     let p = postOffice.postOffice(x, y, w);
     console.log('Centroid: ' + p);
+}
+
+function testQueueUsingStack() {
+    let q = new QueueUsingStack();
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(3);
+    q.enqueue(4);
+    q.enqueue(5);
+    q.print();
+    console.log('Dequeued: ' + q.dequeue());
+    q.print();
+    console.log('Dequeued: ' + q.dequeue());
+    q.print();
 }
