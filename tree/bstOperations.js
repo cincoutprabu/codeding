@@ -11,7 +11,7 @@ module.exports = class BSTOperations {
         Static Methods (class level)
     */
 
-    // Looks for k in a BST starting from node n
+    // Looks for k in a BST starting from node n (using recursion)
     static search(n, k) {
         if (n == null) return n;
         if (n.Value == k) return n;
@@ -22,8 +22,20 @@ module.exports = class BSTOperations {
             return BSTOperations.search(n.Right, k);
     }
 
+    // Looks for k in a BST (without using recursion)
+    static searchNoRecursion(n, k) {
+        let current = n;
+        while (current != null && current.Value != k) {
+            if (k < current.Value)
+                current = current.Left;
+            else if (k > current.Value)
+                current = current.Right;
+        }
+        return current;
+    }
+
     // Finds the minimum element in BST by following
-    // the left child pointers from root to null
+    // the left child pointers from given node to null
     static minimum(n) {
         let current = n;
         let min;
@@ -35,7 +47,7 @@ module.exports = class BSTOperations {
     }
 
     // Finds the minimum element in BST by following
-    // the right child pointers from root to null
+    // the right child pointers from given node to null
     static maximum(n) {
         let current = n;
         let max;
@@ -46,7 +58,90 @@ module.exports = class BSTOperations {
         return max;
     }
 
-    // Prints node value in console by in-order-traversal
+    // Finds the largest element smaller than the given element
+    // (previous element in the sorted order)
+    static predecessor(n, k) {
+        // Find the node of given element
+        let kNode = BSTOperations.search(n, k);
+        if (kNode == null) return null;
+
+        if (kNode.Left != null) { // If left subtree is not empty
+            // Return largest element from left subtree
+            return BSTOperations.maximum(kNode.Left);
+        } else {
+            // Return lowest ancestor of kNode whose right child is also
+            // an ancestor of kNode. Traverse up the tree from kNode until
+            // finding a node that is the right child of kNode's parent.
+            // Here "lowest" refers to height, not "smallest".
+            let current = kNode;
+            let p = current.Parent;
+            while (p != null) {
+                if (current == p.Left) {
+                    return p.Value;
+                }
+                current = p;
+                p = p.Parent;
+            }
+        }
+        return null;
+    }
+
+    // Finds the smallest element greater than the given element
+    // (next element in the sorted order)
+    static successor(n, k) {
+        // Find the node of given element
+        let kNode = BSTOperations.search(n, k);
+        if (kNode == null) return null;
+
+        if (kNode.Right != null) { // If right subtree is not empty
+            // Return smallest element from right subtree
+            return BSTOperations.minimum(kNode.Right);
+        } else {
+            // Return lowest ancestor of kNode whose left child is also
+            // an ancestor of kNode. Traverse up the tree from kNode until
+            // finding a node that is the left child of kNode's parent.
+            // Here "lowest" refers to height, not "smallest".
+            let current = kNode;
+            let p = current.Parent;
+            while (p != null) {
+                if (current == p.Right) {
+                    return p.Value;
+                }
+                current = p;
+                p = p.Parent;
+            }
+        }
+        return null;
+    }
+
+    // Inserts a new element into a BST
+    static insert(root, k) {
+        // Find an appropriate leaf node to append the new element into
+        let current = root;
+        let p = null;
+        while (current != null) {
+            p = current;
+            if (k < current.Value)
+                current = current.Left;
+            else
+                current = current.Right;
+        }
+
+        // Create a new node with leaf found as parent
+        let newNode = new BinaryNode(k);
+        newNode.Parent = p;
+
+        if (p == null) { // If empty tree
+            root = newNode;
+        } else { // Append the new node to the leaf found
+            if (k < p.Value)
+                p.Left = newNode;
+            else
+                p.Right = newNode;
+        }
+    }
+
+    // Prints node values in console by in-order-traversal
     static printInOrder(n) {
         if (n == null) return;
 
@@ -55,7 +150,7 @@ module.exports = class BSTOperations {
         if (n.Right != null) BSTOperations.printInOrder(n.Right);
     }
 
-    // Prints node value in console by pre-order-traversal
+    // Prints node values in console by pre-order-traversal
     static printPreOrder(n) {
         if (n == null) return;
 
@@ -64,7 +159,7 @@ module.exports = class BSTOperations {
         if (n.Right != null) BSTOperations.printPreOrder(n.Right);
     }
 
-    // Prints node value in console by post-order-traversal
+    // Prints node values in console by post-order-traversal
     static printPostOrder(n) {
         if (n == null) return;
 

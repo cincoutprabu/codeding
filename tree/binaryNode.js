@@ -7,6 +7,7 @@ module.exports = class BinaryNode {
 
     constructor(val) {
         this.Value = val;
+        this.Parent = null;
         this.Left = null;
         this.Right = null;
     }
@@ -25,7 +26,10 @@ module.exports = class BinaryNode {
 
     static printNode(node, depth) {
         if (!node) return;
-        if (node.Value) console.log('--'.repeat(depth) + node.Value);
+        if (node.Value) {
+            console.log('--'.repeat(depth) + node.Value + ' (p:' +
+                (node.Parent == null ? '' : node.Parent.Value) + ')');
+        }
 
         if (node.Left && node.Left.Value) BinaryNode.printNode(node.Left, depth + 1);
         if (node.Right && node.Right.Value) BinaryNode.printNode(node.Right, depth + 1);
