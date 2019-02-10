@@ -38,6 +38,17 @@ function testBSTOperations() {
     let root = node15;
     root.print();
 
-    let found = BSTOperations.search(root, 4);
-    console.log(found ? found : "Not found");
+    console.log('Minimum: ' + BSTOperations.minimum(root));
+    console.log('Maximum: ' + BSTOperations.maximum(root));
+
+    // console.log("InOrder");
+    // BSTOperations.printInOrder(root);
+    // BSTOperations.printInOrderStack(root);
+    // console.log("PreOrder");
+    // BSTOperations.printPreOrder(root);
+    // console.log("PostOrder");
+    // BSTOperations.printPostOrder(root);
+
+    // let found = BSTOperations.search(root, 4);
+    // console.log(found ? found : "Not found");
 }
