@@ -55,22 +55,6 @@ module.exports = class BSTOperations {
         if (n.Right != null) BSTOperations.printInOrder(n.Right);
     }
 
-    // Prints node value in console by in-order-traversal
-    static printInOrderStack(n) {
-        if (n == null) return;
-
-        let stack = [];
-        stack.push(n);
-
-        while (stack.length > 0) {
-            let current = stack.pop();
-
-            if (current.Left != null) stack.push(current.Left);
-            console.log(current.Value);
-            if (current.Right != null) stack.push(current.Right);
-        }
-    }
-
     // Prints node value in console by pre-order-traversal
     static printPreOrder(n) {
         if (n == null) return;
