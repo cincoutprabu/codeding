@@ -141,6 +141,63 @@ module.exports = class BSTOperations {
         }
     }
 
+    // Helper method to replace one subtree as a child of its
+    // parent with another subtree
+    static transplant(root, u, v) {
+        if (u.Parent == null) {
+            root = v;
+        }
+        else if (u == u.Parent.Left)
+            u.Parent.Left = v;
+        else
+            u.Parent.Right = v;
+
+        if (v != null)
+            v.Parent = u.Parent;
+    }
+
+    // Deletes the given element from BST
+    static delete(root, k) {
+        // Find the node of given element
+        let kNode = BSTOperations.search(root, k);
+        if (kNode == null) return false;
+
+        // If the given node is a leaf node
+        if (kNode.Left == null && kNode.Right == null) {
+            BSTOperations.transplant(root, kNode, null);
+            return true;
+        }
+
+        // If the given node has left child only
+        if (kNode.Left != null && kNode.Right == null) {
+            BSTOperations.transplant(root, kNode, kNode.Left);
+            return true;
+        }
+
+        // If the given node has right child only
+        if (kNode.Left == null && kNode.Right != null) {
+            BSTOperations.transplant(root, kNode, kNode.Right);
+            return true;
+        }
+
+        // If the given node has both left child and right child
+        let m = BSTOperations.minimum(kNode.Right); // Find successor
+        let mNode = BSTOperations.search(root, m);
+
+        if (mNode.Parent != kNode) {
+            BSTOperations.transplant(root, mNode, mNode.Right);
+            mNode.Right = kNode.Right;
+            mNode.Right.Parent = mNode;
+        }
+
+        mNode.Left = kNode.Left;
+        mNode.Left.Parent = mNode;
+        BSTOperations.transplant(root, kNode, mNode);
+
+        // TBD: Deleting root element needs to be tested
+        return true;
+    }
+
     // Prints node values in console by in-order-traversal
     static printInOrder(n) {
         if (n == null) return;

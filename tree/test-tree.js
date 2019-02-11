@@ -54,7 +54,12 @@ function testBSTOperations() {
     console.log('Successor: ' + BSTOperations.successor(root, 7));
 
     BSTOperations.insert(root, 16);
-    console.log('After Inserting:');
+    console.log('After inserting:');
+    root.print();
+
+    let deleted = BSTOperations.delete(root, 6);
+    console.log('Deleted: ' + deleted);
+    console.log('After deleting:');
     root.print();
 
     // console.log("InOrder");
