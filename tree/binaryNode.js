@@ -10,6 +10,7 @@ module.exports = class BinaryNode {
         this.Parent = null;
         this.Left = null;
         this.Right = null;
+        this.Size = 0; // For OST (Order-Statistic Tree)
     }
 
     /*

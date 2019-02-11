@@ -2,8 +2,10 @@
 
 var BinaryNode = require('../tree/binaryNode');
 var BSTOperations = require('../tree/bstOperations');
+var OSTOperations = require('../tree/ostOperations');
 
-testBSTOperations();
+// testBSTOperations();
+testOSTOperations();
 
 function testBSTOperations() {
     /*
@@ -72,4 +74,16 @@ function testBSTOperations() {
     // let found = BSTOperations.search(root, 3);
     // let found = BSTOperations.searchNoRecursion(root, 3);
     // console.log(found ? "Found Node: " + JSON.stringify(found) : "Not found");
+}
+
+function testOSTOperations() {
+    let node26 = new BinaryNode(26);
+
+    let root = node26;
+    root.print();
+
+    OSTOperations.insert(root, 17);
+    OSTOperations.insert(root, 41);
+    console.log('After inserting:');
+    root.print();
 }
