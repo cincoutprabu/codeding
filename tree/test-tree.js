@@ -3,9 +3,12 @@
 var BinaryNode = require('../tree/binaryNode');
 var BSTOperations = require('../tree/bstOperations');
 var OSTOperations = require('../tree/ostOperations');
+var TreeNode = require('../tree/treeNode');
+var Tree = require('../tree/tree');
 
 // testBSTOperations();
-testOSTOperations();
+// testOSTOperations();
+testGenericTree();
 
 function testBSTOperations() {
     /*
@@ -107,4 +110,20 @@ function testOSTOperations() {
 
     console.log('i-th smallest: ' + OSTOperations.select(root, 17));
     console.log('Rank: ' + OSTOperations.rank(root, 38));
+}
+
+function testGenericTree() {
+    let node1 = new TreeNode(1);
+    let node2 = new TreeNode(2);
+    let node3 = new TreeNode(3);
+    let node4 = new TreeNode(4);
+    let node5 = new TreeNode(5);
+    let node6 = new TreeNode(6);
+    node1.Children.push(node2, node3);
+    node2.Children.push(node4, node5);
+    node3.Children.push(node6);
+
+    let T = new Tree('tree1');
+    T.Root = node1;
+    T.print();
 }

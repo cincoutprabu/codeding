@@ -6,7 +6,7 @@ module.exports = class AdjList {
         Constructor
     */
 
-    constructor(val) {
+    constructor() {
         this.Vertices = [];
     }
 
