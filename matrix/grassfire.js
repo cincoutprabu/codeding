@@ -113,6 +113,8 @@ module.exports = {
         a[sR][sC] = 2 // Restore source cell
         path.splice(0, 0, [dR, dC]); // Add destination to path
         path.push([sR, sC]); // Add source to path
+
+        // TBD: Test paths between other sources and destinations
         return path;
     }
 };

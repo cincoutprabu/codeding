@@ -58,6 +58,8 @@ module.exports = class OSTOperations {
             y = y.Parent;
         }
 
+        // TBD: Test whether rank is computed correctly for
+        // all nodes in a tree
         return rank;
     }
 
