@@ -28,8 +28,9 @@ module.exports = class BinaryNode {
     static printNode(node, depth) {
         if (!node) return;
         if (node.Value) {
-            console.log('--'.repeat(depth) + node.Value + ' (p:' +
-                (node.Parent == null ? '' : node.Parent.Value) + ')');
+            console.log('--'.repeat(depth) + node.Value +
+            ' (p:' + (node.Parent == null ? '' : node.Parent.Value) + ')' +
+            ' (s:' + node.Size + ')');
         }
 
         if (node.Left && node.Left.Value) BinaryNode.printNode(node.Left, depth + 1);

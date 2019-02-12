@@ -78,12 +78,33 @@ function testBSTOperations() {
 
 function testOSTOperations() {
     let node26 = new BinaryNode(26);
+    node26.Size = 1;
 
     let root = node26;
     root.print();
 
     OSTOperations.insert(root, 17);
     OSTOperations.insert(root, 41);
+    OSTOperations.insert(root, 14);
+    OSTOperations.insert(root, 21);
+    OSTOperations.insert(root, 30);
+    OSTOperations.insert(root, 47);
+    OSTOperations.insert(root, 10);
+    OSTOperations.insert(root, 16);
+    OSTOperations.insert(root, 19);
+    OSTOperations.insert(root, 21);
+    OSTOperations.insert(root, 28);
+    OSTOperations.insert(root, 38);
+    OSTOperations.insert(root, 7);
+    OSTOperations.insert(root, 12);
+    OSTOperations.insert(root, 14);
+    OSTOperations.insert(root, 20);
+    OSTOperations.insert(root, 35);
+    OSTOperations.insert(root, 39);
+    OSTOperations.insert(root, 3);
     console.log('After inserting:');
     root.print();
+
+    console.log('i-th smallest: ' + OSTOperations.select(root, 17));
+    console.log('Rank: ' + OSTOperations.rank(root, 38));
 }
