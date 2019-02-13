@@ -18,10 +18,9 @@ module.exports = class Queue extends Array {
     }
 
     dequeue() {
-        let obj = null;
         if (this.length > 0) {
-            obj = this.splice(0, 1);
+            return this.splice(0, 1);
         }
-        return obj;
+        return null;
     }
 }

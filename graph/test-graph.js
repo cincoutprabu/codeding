@@ -1,7 +1,8 @@
 // test-graph.js
 
-var GraphNode = require('../graph/graphNode');
-var AdjList = require('../graph/adjList');
+var GraphNode = require('./graphNode');
+var AdjList = require('./adjList');
+var BFSOperations = require('./bfsOperations');
 
 testBFS();
 
@@ -26,7 +27,10 @@ function testBFS() {
     v4.Edges.push(v2, v5, v3);
     v5.Edges.push(v4, v1, v2);
 
-    let g = new AdjList();
+    let g = new AdjList('Graph1');
     g.Vertices.push(v1, v2, v3, v4, v5);
     g.print();
+
+    // BFSOperations.buildBFSTree(g, v1);
+    // g.print();
 }
