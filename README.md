@@ -7,3 +7,5 @@ This is not officially endorsed by the book authors or publishers. This is part 
 **Why JavaScript / ES6?**
 
 JavaScript / ES6 has been chosen to accompany technical articles in my website http://codeding.com, where you can test each algorithm by entering custom input and visually checking each step of the algorithm (currently this is a work in progress). Time permiting, I will try to create another repository for implementing these algorithms in a high-level programming language like C++, C# or Java. Link to that repository will be posted here when it's ready.
+
+**Note:** To those who are following this repository: please note I have temporarily paused contributing to JavaScript porition of this repo as I encountered an issue with cyclic references in graph nodes when storing & retreiving them to/from an array (JavaScript array of course). Will resume once I find a fix or workaround for this issue. Meanwhile, I'm continuing with graph algorithms in Objective-C.
