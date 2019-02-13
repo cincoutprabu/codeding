@@ -18,10 +18,15 @@ typedef enum {
 
 // Properties
 @property (nonatomic, assign) int Value;
+@property (nonatomic, assign) char Char; // Either 'Value' is used or 'Char' is used
 @property (nonatomic, strong) NSMutableArray<GraphNode*> *Edges;
+
 @property (nonatomic, assign) GRAPH_NODE_COLOR Color;
 @property (nonatomic, assign) int Distance;
 @property (nonatomic, strong) GraphNode *Predecessor;
+
+@property (nonatomic, assign) int DiscoveredTime;
+@property (nonatomic, assign) int FinishingTime;
 
 // Methods
 - (id)initWithValue:(int)val;

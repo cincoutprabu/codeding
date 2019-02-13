@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BFSOperations.h"
 
 @interface GraphHelper : NSObject
 

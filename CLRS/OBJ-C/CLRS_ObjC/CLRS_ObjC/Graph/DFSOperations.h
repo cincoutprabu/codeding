@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Tree.h"
+#import "AdjList.h"
 
 /*
  Helper class for implementing DFS (Depth First Search) algorithms.
  */
 @interface DFSOperations : NSObject
+
++ (void)dfs:(AdjList*)g;
++ (void)dfsVisit:(AdjList*)g fromNode:(GraphNode*)node;
+
 @end

@@ -27,13 +27,22 @@
     for (GraphNode *u in self.Vertices) {
         u.Color = GRAPH_NODE_COLOR_WHITE;
         u.Distance = 0;
+        u.DiscoveredTime = 0;
+        u.FinishingTime = 0;
     }
 }
 
-- (void)print {
+- (void)printGraph {
     NSLog(@"Graph(%@): %d vertices", self.ID, (int)self.Vertices.count);
     for (GraphNode *u in self.Vertices) {
         [u print];
+    }
+}
+
+- (void)printVertices {
+    NSLog(@"Graph(%@): %d vertices", self.ID, (int)self.Vertices.count);
+    for (GraphNode *u in self.Vertices) {
+        NSLog(@"%@", u);
     }
 }
 

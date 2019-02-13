@@ -21,6 +21,7 @@
 // Methods
 - (id)initWithID:(NSString*)id;
 - (void)clearFlags;
-- (void)print;
+- (void)printGraph;
+- (void)printVertices;
 
 @end
