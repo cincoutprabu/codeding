@@ -4,8 +4,4 @@ JavaScript / ES6 implementation of algorithms from the book *Introduction to Alg
 
 This is not officially endorsed by the book authors or publishers. This is part of my personal learning process and deep dive into algorithms, as I'm practicing to implement most, if not all, algorithms from the book. Functions/methods has been named similar to the book, and tested typically with the same sample inputs mentioned in the book (so you can cross reference the code side-by-side when you are reading the book).
 
-**Why JavaScript / ES6?**
-
-JavaScript / ES6 has been chosen to accompany technical articles in my website http://codeding.com, where you can test each algorithm by entering custom input and visually checking each step of the algorithm (currently this is a work in progress). Time permiting, I will try to create another repository for implementing these algorithms in a high-level programming language like C++, C# or Java. Link to that repository will be posted here when it's ready.
-
 **Note:** To those who are following this repository: please note I have temporarily paused contributing to JavaScript porition of this repo as I encountered an issue with cyclic references in graph nodes when storing & retreiving them to/from an array (JavaScript array of course). Will resume once I find a fix or workaround for this issue. Meanwhile, I'm continuing with graph algorithms in Objective-C.
