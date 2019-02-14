@@ -80,7 +80,7 @@
 }
 
 + (void)testTopologicalSort {
-    // Graph example from Figure 22.7 on CLRS book page 613.
+    // Graph example from Figure 22.7 on CLRS 3rd edition book page 613.
     GraphNode *node_undershorts = [[GraphNode alloc] initWithValue:@"undershorts"];
     GraphNode *node_pants = [[GraphNode alloc] initWithValue:@"pants"];
     GraphNode *node_belt = [[GraphNode alloc] initWithValue:@"belt"];

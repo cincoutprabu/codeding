@@ -53,7 +53,8 @@
 }
 
 // Performs a topological sort on the given Graph
-// and returns the sorted list (using inbound-count attribute)
+// and returns the sorted list (using inbound-count attribute).
+// This is based on algorithm given in CTCI 6th Edition book page 632.
 + (NSArray*)topologicalSortUsingInboundCount:(AdjList*)g {
     NSMutableArray *result = [NSMutableArray new];
     
