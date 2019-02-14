@@ -18,7 +18,9 @@
 // Methods
 - (id)initWithValue:(int)val;
 - (NSString*)toString;
+- (void)print;
 
 + (BinaryNode*)create:(int)val;
++ (void)printNode:(BinaryNode*)node depth:(int)depth;
 
 @end

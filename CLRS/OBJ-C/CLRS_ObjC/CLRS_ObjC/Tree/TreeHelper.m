@@ -48,9 +48,33 @@
     node7.Left = node6;
     node7.Right = node9;
     
-    BinaryNode *node5Copy = [node5 copy];
-    int treeSum = [TreeHelper sumOfAllNodes:node5Copy];
+    BinaryNode *root = [node5 copy];
+    [root print];
+    [BTOperations invert:root];
+    [root print];
+
+    int treeSum = [TreeHelper sumOfAllNodes:root];
     NSLog(@"TreeSum: %d", treeSum);
+}
+
++ (void)testBTSymmetric {
+    BinaryNode *node1 = [[BinaryNode alloc] initWithValue:1];
+    BinaryNode *node2L = [[BinaryNode alloc] initWithValue:2];
+    BinaryNode *node2R = [[BinaryNode alloc] initWithValue:2];
+    BinaryNode *node3a = [[BinaryNode alloc] initWithValue:3];
+    BinaryNode *node3b = [[BinaryNode alloc] initWithValue:3];
+    BinaryNode *node4a = [[BinaryNode alloc] initWithValue:4];
+    BinaryNode *node4b = [[BinaryNode alloc] initWithValue:4];
+    node1.Left = node2L;
+    node1.Right = node2R;
+    node2L.Left = node3a;
+    node2L.Right = node4a;
+    node2R.Left = node4b;
+    node2R.Right = node3b;
+    
+    BinaryNode *root = node1;
+    [root print];
+    NSLog(@"IsSymmetric: %d", [BTOperations isSymmetric:root]);
 }
 
 + (void)testTree {

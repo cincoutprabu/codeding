@@ -28,10 +28,6 @@
     return [NSString stringWithFormat:@"%d", self.Value];
 }
 
-+ (BinaryNode*)create:(int)val {
-    return [[BinaryNode alloc] initWithValue:val];
-}
-
 - (BOOL)isEqual:(id)object {
     if (self == object) return YES;
     if ([self class] == [object class]) return YES;
@@ -48,7 +44,20 @@
     return newNode;
 }
 
-- (void)dealloc {
+- (void)print {
+    [BinaryNode printNode:self depth:0];
+}
+
++ (BinaryNode*)create:(int)val {
+    return [[BinaryNode alloc] initWithValue:val];
+}
+
++ (void)printNode:(BinaryNode*)node depth:(int)depth {
+    NSString *line = [@"" stringByPaddingToLength:depth * 2 withString:@"--" startingAtIndex:0];
+    NSLog(@"%@%d", line, node.Value);
+    
+    if (node.Left != nil) [BinaryNode printNode:node.Left depth:depth + 1];
+    if (node.Right != nil) [BinaryNode printNode:node.Right depth:depth + 1];
 }
 
 @end

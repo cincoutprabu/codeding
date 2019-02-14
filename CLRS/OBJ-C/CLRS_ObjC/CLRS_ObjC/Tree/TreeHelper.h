@@ -10,11 +10,13 @@
 #import "BinaryNode.h"
 #import "TreeNode.h"
 #import "Tree.h"
+#import "BTOperations.h"
 
 @interface TreeHelper : NSObject
 
 + (int)sumOfAllNodes:(BinaryNode*)n;
 + (void)testBinaryTree;
++ (void)testBTSymmetric;
 + (void)testTree;
 
 @end

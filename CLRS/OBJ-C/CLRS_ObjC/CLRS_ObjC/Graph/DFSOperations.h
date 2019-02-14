@@ -11,7 +11,7 @@
 #import "AdjList.h"
 
 /*
- Helper class for implementing DFS (Depth First Search) algorithms.
+    DFS (Depth First Search) algorithms on Graph data structure.
  */
 @interface DFSOperations : NSObject
 

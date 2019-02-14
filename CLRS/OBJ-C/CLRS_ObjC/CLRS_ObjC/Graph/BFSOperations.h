@@ -11,7 +11,7 @@
 #import "AdjList.h"
 
 /*
-    Helper class for implementing BFS (Breadth First Search) algorithms.
+    BFS (Breadth First Search) algorithms on Graph data structure.
  */
 @interface BFSOperations : NSObject
 
