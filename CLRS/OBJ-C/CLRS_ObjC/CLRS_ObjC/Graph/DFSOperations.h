@@ -15,7 +15,8 @@
  */
 @interface DFSOperations : NSObject
 
-+ (void)dfs:(AdjList*)g;
-+ (void)dfsVisit:(AdjList*)g fromNode:(GraphNode*)node;
++ (void)dfs:(AdjList*)g sortedResult:(NSMutableArray*)sortedResult;
++ (void)dfsVisit:(AdjList*)g fromNode:(GraphNode*)node sortedResult:(NSMutableArray*)sortedResult;
++ (NSArray*)topologicalSort:(AdjList*)g;
 
 @end

@@ -17,6 +17,9 @@
 // Properties
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, strong) NSMutableArray<GraphNode*> *Vertices;
+@property (nonatomic, assign) int DFSTime; // Used in calculating discovered-time
+                                           // and finished-time for each node
+                                           // in the Graph
 
 // Methods
 - (id)initWithID:(NSString*)id;

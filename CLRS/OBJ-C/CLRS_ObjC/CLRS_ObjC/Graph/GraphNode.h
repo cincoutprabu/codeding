@@ -17,8 +17,7 @@ typedef enum {
 @interface GraphNode : NSObject
 
 // Properties
-@property (nonatomic, assign) int Value;
-@property (nonatomic, assign) char Char; // Either 'Value' is used or 'Char' is used
+@property (nonatomic, copy) NSString *Value;
 @property (nonatomic, strong) NSMutableArray<GraphNode*> *Edges;
 
 @property (nonatomic, assign) GRAPH_NODE_COLOR Color;
@@ -29,7 +28,7 @@ typedef enum {
 @property (nonatomic, assign) int FinishingTime;
 
 // Methods
-- (id)initWithValue:(int)val;
+- (id)initWithValue:(NSString*)val;
 - (void)print;
 
 @end

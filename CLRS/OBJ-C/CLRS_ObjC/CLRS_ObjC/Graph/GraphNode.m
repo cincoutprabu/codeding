@@ -11,13 +11,12 @@
 @implementation GraphNode
 
 // Properties
-@synthesize Value, Char, Edges, Color, Distance, Predecessor, DiscoveredTime, FinishingTime;
+@synthesize Value, Edges, Color, Distance, Predecessor, DiscoveredTime, FinishingTime;
 
 // Methods
-- (id)initWithValue:(int)val {
+- (id)initWithValue:(NSString*)val {
     if ((self = [super init])) {
         self.Value = val;
-        self.Char = ' ';
         self.Edges = [NSMutableArray new];
         self.Color = GRAPH_NODE_COLOR_WHITE;
         self.Distance = 0;
@@ -29,8 +28,8 @@
 }
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"%d,%c (c: %d, d: %d, t1: %d, t2: %d)",
-            self.Value, self.Char, self.Color, self.Distance,
+    return [NSString stringWithFormat:@"%@ (c: %d, d: %d, t1: %d, t2: %d)",
+            self.Value, self.Color, self.Distance,
             self.DiscoveredTime, self.FinishingTime];
 }
 

@@ -11,7 +11,7 @@
 @implementation AdjList
 
 // Properties
-@synthesize ID, Vertices;
+@synthesize ID, Vertices, DFSTime;
 
 // Methods
 
@@ -19,6 +19,7 @@
     if ((self = [super init])) {
         self.ID = id;
         self.Vertices = [NSMutableArray new];
+        self.DFSTime = 0;
     }
     return self;
 }

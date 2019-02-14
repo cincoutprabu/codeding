@@ -11,7 +11,7 @@
 @implementation BFSOperations
 
 + (Tree*)createBFSTree:(AdjList*)g fromNode:(GraphNode*)s {
-    TreeNode *root = [[TreeNode alloc] initWithValue:s.Value];
+    TreeNode *root = [[TreeNode alloc] initWithValue:[s.Value intValue]];
     Tree *tree = [[Tree alloc] initWithID:@"CreateBFSResult"];
     tree.Root = root;
     
@@ -29,7 +29,7 @@
         if (u.Value == s.Value) {
             current = root;
         } else {
-            current = [current findChildWithValue:u.Value];
+            current = [current findChildWithValue:[u.Value intValue]];
         }
         // NSLog(@"Current tree-node: %d", current.Value);
         
@@ -39,7 +39,7 @@
                 v.Distance = u.Distance + 1;
                 v.Predecessor = u;
                 
-                TreeNode *child = [[TreeNode alloc] initWithValue:v.Value];
+                TreeNode *child = [[TreeNode alloc] initWithValue:[v.Value intValue]];
                 child.Parent = current;
                 [current.Children addObject:child];
                 

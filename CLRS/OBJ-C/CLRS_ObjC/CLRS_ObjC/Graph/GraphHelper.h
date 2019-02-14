@@ -11,5 +11,7 @@
 @interface GraphHelper : NSObject
 
 + (void)testBFS;
++ (void)testDFS;
++ (void)testTopologicalSort;
 
 @end
