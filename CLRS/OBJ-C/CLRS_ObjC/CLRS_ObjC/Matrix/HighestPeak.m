@@ -17,7 +17,7 @@
         for (int c = 0; c < m.Columns; c += 1) {
             int v = [m getCellValueFromRow:r c:c];
             if (v == 0) {
-                NSLog(@"Processing lake at cell: %d,%d", r, c);
+                // NSLog(@"Processing lake at cell: %d,%d", r, c);
                 [HighestPeak processLakeAtCell:m r:r c:c];
             }
         }
@@ -40,8 +40,8 @@
         Cell *current = [stack firstObject];
         [stack removeObjectAtIndex:0];
         
-        [current print];
-        printf(" => ");
+        // [current print];
+        // printf(" => ");
         
         // Check 8 neighbors of current cell
         Cell *topCell = [m getNeighbor:current direction:CELL_TOP];
@@ -84,16 +84,16 @@
             [HighestPeak processCell:m visited:visited current:current neighbor:seCell stack:stack];
         }
         
-        [topCell print];
-        [bottomCell print];
-        [leftCell print];
-        [rightCell print];
-        [nwCell print];
-        [neCell print];
-        [swCell print];
-        [seCell print];
-        printf("\n");
-        [m print];
+        // [topCell print];
+        // [bottomCell print];
+        // [leftCell print];
+        // [rightCell print];
+        // [nwCell print];
+        // [neCell print];
+        // [swCell print];
+        // [seCell print];
+        // printf("\n");
+        // [m print];
     }
 }
 
