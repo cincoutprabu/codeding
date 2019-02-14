@@ -24,4 +24,19 @@
     return self;
 }
 
+- (void)print {
+    printf("{%d,%d}", self.R, self.C);
+}
+
+- (BOOL)isEqual:(id)object {
+    if ([object class] != [Cell class]) return NO;
+    
+    Cell *cell = (Cell*)object;
+    return self.R == cell.R && self.C == cell.C;
+}
+
+- (NSString*)description {
+    return [NSString stringWithFormat:@"{%d,%d}", self.R, self.C];
+}
+
 @end

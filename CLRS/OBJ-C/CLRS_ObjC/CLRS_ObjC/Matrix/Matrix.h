@@ -31,6 +31,7 @@ typedef enum {
 
 - (id)initWithRows:(int)rows columns:(int)columns;
 - (void)setData:(int*)data;
+- (int)getCellValueFromRow:(int)r c:(int)c;
 - (int)getCellValue:(Cell*)cell;
 - (void)setCellValue:(Cell*)cell value:(int)value;
 - (Cell*)getNeighbor:(Cell*)cell direction:(CELL_DIRECTION)direction;

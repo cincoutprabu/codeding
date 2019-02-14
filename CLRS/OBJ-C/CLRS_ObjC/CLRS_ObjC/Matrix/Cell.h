@@ -18,5 +18,6 @@
 // Methods
 
 - (id)initWithR:(int)r c:(int)c;
+- (void)print;
 
 @end

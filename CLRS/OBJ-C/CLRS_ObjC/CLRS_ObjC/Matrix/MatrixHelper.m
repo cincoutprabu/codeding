@@ -9,6 +9,7 @@
 #import "MatrixHelper.h"
 #import "Matrix.h"
 #import "ShapeFill.h"
+#import "HighestPeak.h"
 
 @implementation MatrixHelper
 
@@ -29,6 +30,29 @@
     
     NSLog(@"After ShapeFill:");
     [ShapeFill fillShape:m];
+    [m print];
+}
+
++ (void)testHighestPeak {
+    int a[] = {
+        1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 0, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 0, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1,
+        1, 1, 1, 1, 1, 1, 1, 1, 1
+    };
+    
+    Matrix *m = [[Matrix alloc] initWithRows:9 columns:9];
+    [m setData:(int*)a];
+    [m print];
+    
+    NSLog(@"After computing highest peak:");
+    int peak = [HighestPeak getHighestPeak:m];
+    NSLog(@"Highest Peak: %d", peak);
     [m print];
 }
 

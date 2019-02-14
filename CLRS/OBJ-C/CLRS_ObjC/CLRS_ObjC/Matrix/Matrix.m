@@ -35,16 +35,20 @@ int a[10][10];
     }
 }
 
-- (int)getCellValue:(Cell*)cell {
-    if (cell.R > 0 && cell.R < self.Rows - 1)
-        if (cell.C > 0 && cell.C < self.Columns - 1)
-            return a[cell.R][cell.C];
+- (int)getCellValueFromRow:(int)r c:(int)c {
+    if (r >= 0 && r <= self.Rows - 1)
+        if (c >= 0 && c <= self.Columns - 1)
+            return a[r][c];
     return -1;
 }
 
+- (int)getCellValue:(Cell*)cell {
+    return [self getCellValueFromRow:cell.R c:cell.C];
+}
+
 - (void)setCellValue:(Cell*)cell value:(int)value {
-    if (cell.R > 0 && cell.R < self.Rows - 1)
-        if (cell.C > 0 && cell.C < self.Columns - 1)
+    if (cell.R >= 0 && cell.R <= self.Rows - 1)
+        if (cell.C >= 0 && cell.C <= self.Columns - 1)
             a[cell.R][cell.C] = value;
 }
 

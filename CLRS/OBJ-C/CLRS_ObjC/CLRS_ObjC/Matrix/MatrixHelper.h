@@ -11,5 +11,6 @@
 @interface MatrixHelper : NSObject
 
 + (void)testShapeFill;
++ (void)testHighestPeak;
 
 @end
