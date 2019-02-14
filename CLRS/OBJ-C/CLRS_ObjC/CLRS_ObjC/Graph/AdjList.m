@@ -28,8 +28,10 @@
     for (GraphNode *u in self.Vertices) {
         u.Color = GRAPH_NODE_COLOR_WHITE;
         u.Distance = 0;
+        u.Predecessor = nil;
         u.DiscoveredTime = 0;
         u.FinishingTime = 0;
+        u.Inbound = 0;
     }
 }
 

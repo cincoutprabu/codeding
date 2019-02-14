@@ -17,6 +17,7 @@
 
 + (void)dfs:(AdjList*)g sortedResult:(NSMutableArray*)sortedResult;
 + (void)dfsVisit:(AdjList*)g fromNode:(GraphNode*)node sortedResult:(NSMutableArray*)sortedResult;
-+ (NSArray*)topologicalSort:(AdjList*)g;
++ (NSArray*)topologicalSortUsingFinishedTime:(AdjList*)g;
++ (NSArray*)topologicalSortUsingInboundCount:(AdjList*)g;
 
 @end

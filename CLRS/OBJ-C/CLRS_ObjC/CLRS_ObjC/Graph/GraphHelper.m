@@ -113,7 +113,8 @@
     [g printGraph];
     
     // Perform topological sorting on the given graph
-    NSArray *sorted = [DFSOperations topologicalSort:g];
+    // NSArray *sorted = [DFSOperations topologicalSortUsingFinishedTime:g];
+    NSArray *sorted = [DFSOperations topologicalSortUsingInboundCount:g];
     NSLog(@"Sorted: %@", sorted);
 }
 

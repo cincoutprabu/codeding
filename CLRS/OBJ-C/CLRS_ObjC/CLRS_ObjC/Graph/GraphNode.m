@@ -11,7 +11,7 @@
 @implementation GraphNode
 
 // Properties
-@synthesize Value, Edges, Color, Distance, Predecessor, DiscoveredTime, FinishingTime;
+@synthesize Value, Edges, Color, Distance, Predecessor, DiscoveredTime, FinishingTime, Inbound;
 
 // Methods
 - (id)initWithValue:(NSString*)val {
@@ -23,14 +23,15 @@
         self.Predecessor = nil;
         self.DiscoveredTime = 0;
         self.FinishingTime = 0;
+        self.Inbound = 0;
     }
     return self;
 }
 
 - (NSString*)description {
-    return [NSString stringWithFormat:@"%@ (c: %d, d: %d, t1: %d, t2: %d)",
+    return [NSString stringWithFormat:@"%@ (c: %d, d: %d, t1: %d, t2: %d, i: %d)",
             self.Value, self.Color, self.Distance,
-            self.DiscoveredTime, self.FinishingTime];
+            self.DiscoveredTime, self.FinishingTime, self.Inbound];
 }
 
 - (void)print {

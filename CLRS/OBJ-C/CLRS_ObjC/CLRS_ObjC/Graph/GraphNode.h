@@ -21,11 +21,13 @@ typedef enum {
 @property (nonatomic, strong) NSMutableArray<GraphNode*> *Edges;
 
 @property (nonatomic, assign) GRAPH_NODE_COLOR Color;
-@property (nonatomic, assign) int Distance;
+@property (nonatomic, assign) int Distance; // Distance marked from an ancestor node
 @property (nonatomic, strong) GraphNode *Predecessor;
 
 @property (nonatomic, assign) int DiscoveredTime;
 @property (nonatomic, assign) int FinishingTime;
+
+@property (nonatomic, assign) int Inbound; // Number of inbound edges to this node
 
 // Methods
 - (id)initWithValue:(NSString*)val;
