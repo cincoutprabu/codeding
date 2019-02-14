@@ -1,5 +1,5 @@
 //
-//  FillAndRotate.h
+//  ShapeFill.h
 //  CLRS_ObjC
 //
 //  Created by Arumugam, Prabu on 2/13/19.
@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Matrix.h"
 
-@interface FillAndRotate : NSObject
+@interface ShapeFill : NSObject
 
-+ (void)fillAndRotate;
++ (void)fillShape:(Matrix*)m;
 
 @end
