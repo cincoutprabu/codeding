@@ -30,6 +30,8 @@ using System;
     For example, if a = "cde" and b = "dcf", we can delete 'e' from string a
     and 'f' from string b, so that both remaining strings are "cd" and "dc"
     which are anagrams.
+
+    The strings a and b consist of lowercase English alphabetic letters [a-z].
  */
 
 class Solution {
