@@ -15,7 +15,7 @@ using System.Text;
 using System;
 
 /*
-    Problem Statement:
+    "Jumping on Clouds" Problem Statement:
 
     Emma is playing a new mobile game that starts with consecutively numbered
     clouds. Some of the clouds are thunderheads and others are cumulus. She
